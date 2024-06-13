@@ -1,0 +1,71 @@
+<resources>
+    <!--Shared Strings-->
+    <string name="app_name">Блокнот</string>
+
+    <string-array name="fonts_array">
+        <item>babayka</item>
+        <item>cakra</item>
+        <item>hight</item>
+        <item>segoe_script</item>
+    </string-array>
+
+    <string-array name="themes_array">
+        <item>Светлая</item>
+        <item>Темная</item>
+    </string-array>
+
+    <!--Strings for MainActivity-->
+    <string name="addNote_btn">Новая заметка1</string>
+
+
+    <!--Strings for CreateNoteActivity-->
+    <string name="saveNote">Сохранить</string>
+    <string name="buyApples">Купить яблоки...</string>
+
+    <!--Strings for Menu-->
+    <string name="title_item_settings">Настройки</string>
+    <string name="title_item_about">О программе</string>
+
+    <!--Strings for SettingsActivity-->
+    <string name="font">Шрифт</string>
+    <string name="size_font">Размер шрифта:</string>
+    <string name="theme">Тема:</string>
+    <string name="exportNotes">Экспорт заметок:</string>
+    <string name="save_settings">Сохранить настройки:</string>
+
+    <!--Strings for InfoActivity-->
+    <string name="info">
+        Список используемых технологий (инструментов): \n
+        1) Java SE (Классы: ArrayList, String,  Интерфейсы: Removable); \n
+        2) Android API (Классы: Intent, EditText, Toast, TypeFace, TextView, ImageView, ListView, FAB, SQLiteDatabase, Cursor, Menu, MenuItem, RatingBar, SeekBar, Spinner, Button, View, ArrayAdapter, ArrayView, Context, Bundle, Activity); \n
+        3) XML для создания UI; \n
+        4) IDE - Android Studio Dophin 2021.3.1; \n
+        5)
+
+    </string>
+
+    <!--Strings for CustomDialogFragment-->
+    <string name="delete_note">Удалить заметку</string>
+    <string name="copy_note">Копировать заметку</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

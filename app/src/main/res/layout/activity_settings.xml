@@ -1,0 +1,90 @@
+ <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        style="@style/TableRowStyle">
+        <TextView
+            style="@style/FirstTextViewSettingsStyle"
+            android:text="@string/font" />
+
+        <TextView
+            android:id="@+id/fontValueView"
+            style="@style/SecondTextViewSettingsStyle"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/font_spinner"
+            style="@style/OtherViewSettingsStyle"/>
+    </TableRow>
+
+    <TableRow
+        style="@style/TableRowStyle">
+        <TextView
+            style="@style/FirstTextViewSettingsStyle"
+            android:text="@string/size_font"/>
+
+        <TextView
+            android:id="@+id/sizeFontView"
+            style="@style/SecondTextViewSettingsStyle"
+            android:textAlignment="center" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/OtherViewSettingsStyle"
+            android:thumbTint="#FA9A9A"
+
+            android:progress="11"
+            android:max="36"
+            android:min="6"/>
+    </TableRow>
+
+    <TableRow
+        style="@style/TableRowStyle">
+        <TextView
+            style="@style/FirstTextViewSettingsStyle"
+            android:text="@string/theme"/>
+
+        <TextView
+            android:id="@+id/themeValueView"
+            style="@style/SecondTextViewSettingsStyle"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/themes_spinner"
+            style="@style/OtherViewSettingsStyle"/>
+    </TableRow>
+
+     <TableRow
+         style="@style/TableRowStyle">
+         <TextView
+             style="@style/FirstTextViewSettingsStyle"
+             android:text="@string/exportNotes"/>
+
+         <TextView
+             style="@style/SecondTextViewSettingsStyle" />
+
+         <ImageView
+             style="@style/OtherViewSettingsStyle"
+
+             android:id="@+id/export_ImageView"
+             android:src="@drawable/export"
+             android:background="@color/white"
+             android:onClick="exportNotes"/>
+     </TableRow>
+
+    <TableRow
+        style="@style/TableRowStyle">
+        <Button
+            style="@style/ButtonStyle"
+
+            android:layout_weight="1"
+            android:text="@string/save_settings"
+            android:onClick="saveSettings"/>
+    </TableRow>
+
+
+
+
+</TableLayout>

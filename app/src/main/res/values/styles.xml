@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TableRowStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="FirstTextViewSettingsStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+
+    </style>
+
+    <style name="SecondTextViewSettingsStyle">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="OtherViewSettingsStyle">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#00C9CF</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:background">@drawable/drawable_button</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

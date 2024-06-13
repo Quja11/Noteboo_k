@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/drawable/border.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/drawable/drawable_button.xml" value="0.125" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/drawable/example_animation.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/drawable/shape.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/activity_create_note.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/activity_edit_note.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/activity_info.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/activity_settings.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/dialog_window.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/layout_alert_dialog.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/layout/layout_list_view.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/menu/main_menu.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1235" />
+        <entry key="..\:/AndroidStudioProjects/NoteBook/app/src/main/res/xml/filepaths.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/layout/activity_create_note.xml" value="0.1641337386018237" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/layout/activity_info.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/layout/activity_main.xml" value="0.1453804347826087" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/layout/activity_settings.xml" value="0.1641337386018237" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/layout/layout_list_view.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/menu/main_menu.xml" value="0.3323076923076923" />
+        <entry key="..\:/AndroidStudioProjects/app/src/main/res/menu/menu.xml" value="0.3323076923076923" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

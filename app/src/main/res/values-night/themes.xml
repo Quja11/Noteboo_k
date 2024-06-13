@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NoteBook" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">#F48C8C</item>
+        <item name="colorPrimaryDark">#CF6969</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>
