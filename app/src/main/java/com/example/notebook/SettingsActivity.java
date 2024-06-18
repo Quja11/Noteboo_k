@@ -17,7 +17,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
+import java.io.IOException;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -195,11 +198,6 @@ public class SettingsActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-
 
 
 

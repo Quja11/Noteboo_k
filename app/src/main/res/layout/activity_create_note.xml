@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apiView"
+
+        android:background="#FF6D00"
+        android:gravity="center" />
+
     <EditText
         android:id="@+id/message"
         android:layout_width="match_parent"

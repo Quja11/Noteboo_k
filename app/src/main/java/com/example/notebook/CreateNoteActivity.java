@@ -12,11 +12,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
 
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.LocalDateTime;
 
 public class CreateNoteActivity extends AppCompatActivity {
     private Database db;
     private Note note;
+    private TextView apiView;
     private EditText editText;
     private Settings settings;
 
@@ -27,21 +38,38 @@ public class CreateNoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_note);
+
         init();
-
-
         setSavedValue();
-
-
-
 
 
     }
 
     private void init(){
         settings = new Settings(getBaseContext());
+        apiView = findViewById(R.id.apiView);
         editText = findViewById(R.id.message);
 
+        //Заносим операцию, связанную с сетью в дочерний поток
+        Thread networkThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String sentence = getContentFromApi("title", 1, "json");
+                String parsingSentence = parseContentFromApi(sentence);
+
+                apiView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        apiView.setText(parsingSentence);
+                    }
+                });
+
+
+            }
+
+        });
+
+        networkThread.start();
     }
 
     private void setSavedValue(){
@@ -94,7 +122,7 @@ public class CreateNoteActivity extends AppCompatActivity {
     }
 
 
-    public String getCurrentDate(){
+    private String getCurrentDate(){
         LocalDateTime ldt = LocalDateTime.now();
         String day = String.valueOf(ldt.getDayOfMonth());
         String month = String.valueOf(ldt.getMonth()).substring(0, 3);
@@ -116,22 +144,75 @@ public class CreateNoteActivity extends AppCompatActivity {
 
 
 
+    //Получение контента с fishTextApi
+    private String getContentFromApi(String _type, int _number, String _format){
+
+        String params = String.format("?type=%s&number=%d&format=%s", _type, _number, _format);
+
+        try {
+            URL url = new URL("https://fish-text.ru/get" + params);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            connection.setRequestMethod("GET");
+            connection.connect();
+
+            InputStream inputStream = connection.getInputStream();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+            StringBuilder response = new StringBuilder();
+
+            String line;
+
+            while((line = bufferedReader.readLine()) != null){
+                response.append(line);
+            }
+
+            bufferedReader.close();
+
+
+            Log.i("QQQ1", response.toString());
+            return response.toString();
 
 
 
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
+        return "something wrong";
+    }
 
+    //Парсинг ответа api (JSON)
+    private String parseContentFromApi(String contentFromApi) {
+        JSONObject jsonObject = (JSONObject) JSONValue.parse(contentFromApi);
 
+        String result = (String) jsonObject.get("text");
 
-
-
-
-
-
+        return result;
+    }
 
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
