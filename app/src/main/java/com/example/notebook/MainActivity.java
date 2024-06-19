@@ -2,6 +2,7 @@ package com.example.notebook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements Removable{
         notesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //Сверточек -?- monique
+
                 Bundle args = new Bundle();
                 args.putString("EDIT_TEXT", notes.get(i).getMessage());
                 args.putInt("ID", i);
@@ -121,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements Removable{
 
 
     //Меню и его методы
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);

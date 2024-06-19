@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/item_settings"
-        android:orderInCategory="1"
-        android:title="@string/title_item_settings" />
-    <item
-        android:id="@+id/item_info"
-        android:orderInCategory="2"
-        android:title="@string/title_item_about" />
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title=""
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/item_settings"
+                android:icon="@drawable/ic_baseline_build_24"
+                android:title="Настройки" />
+            <item
+                android:id="@+id/item_info"
+                android:icon="@drawable/ic_baseline_vaping_rooms_24"
+                android:title="О приложении" />
+        </menu>
+    </item>
+
+
 </menu>

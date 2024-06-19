@@ -7,7 +7,10 @@ import androidx.core.content.FileProvider;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -22,11 +25,18 @@ import org.w3c.dom.Text;
 import java.io.File;
 import java.io.IOException;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity implements Animationable{
 
     //переменные ресурсов
     String[] fonts;
     String[] themes;
+
+    //переменные статичных view
+    TextView fontView;
+    TextView sizeView;
+    TextView themeView;
+    TextView exportView;
+
 
     //переменные для view значений настроек
     TextView fontValueView;
@@ -38,6 +48,9 @@ public class SettingsActivity extends AppCompatActivity {
     SeekBar seekBar;
     Spinner themeSpinner;
     ImageView exportImageView;
+
+    //переменные для кнопок
+    Button saveSettings_btn;
 
 
     //Переменные для настроек
@@ -63,7 +76,13 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void initialization(){
+
         settings = new Settings(getBaseContext());
+
+        fontView = findViewById(R.id.fontView);
+        sizeView = findViewById(R.id.sizeView);;
+        themeView = findViewById(R.id.themeView);;
+        exportView = findViewById(R.id.exportView);
 
         fontValueView = (TextView) findViewById(R.id.fontValueView);
         sizeFontView = (TextView) findViewById(R.id.sizeFontView);
@@ -72,6 +91,15 @@ public class SettingsActivity extends AppCompatActivity {
         fontSpinner = (Spinner) findViewById(R.id.font_spinner);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         themeSpinner = (Spinner) findViewById(R.id.themes_spinner);
+
+        exportImageView = findViewById(R.id.export_ImageView);
+        saveSettings_btn = (Button) findViewById(R.id.saveSettings_btn);
+
+        //Анимация
+        View[] views = {fontView, sizeView, themeView, exportView, fontValueView, sizeFontView, themeValueView, fontSpinner, seekBar, themeSpinner, exportImageView, saveSettings_btn};
+        for(View view : views){
+            animate(view);
+        }
 
         fonts = getResources().getStringArray(R.array.fonts_array);
         themes = getResources().getStringArray(R.array.themes_array);
@@ -200,10 +228,6 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
     //Сохранение текущих настроек
     public void saveSettings(View view){
         settings.saveSettings();
@@ -213,9 +237,11 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
-
-
-
+    @Override
+    public void animate(View view) {
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade_animation);
+        view.startAnimation(animation);
+    }
 
 
 

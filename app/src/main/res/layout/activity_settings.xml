@@ -6,6 +6,7 @@
     <TableRow
         style="@style/TableRowStyle">
         <TextView
+            android:id="@+id/fontView"
             style="@style/FirstTextViewSettingsStyle"
             android:text="@string/font" />
 
@@ -22,6 +23,7 @@
     <TableRow
         style="@style/TableRowStyle">
         <TextView
+            android:id="@+id/sizeView"
             style="@style/FirstTextViewSettingsStyle"
             android:text="@string/size_font"/>
 
@@ -43,6 +45,7 @@
     <TableRow
         style="@style/TableRowStyle">
         <TextView
+            android:id="@+id/themeView"
             style="@style/FirstTextViewSettingsStyle"
             android:text="@string/theme"/>
 
@@ -59,6 +62,7 @@
      <TableRow
          style="@style/TableRowStyle">
          <TextView
+             android:id="@+id/exportView"
              style="@style/FirstTextViewSettingsStyle"
              android:text="@string/exportNotes"/>
 
@@ -79,6 +83,7 @@
         <Button
             style="@style/ButtonStyle"
 
+            android:id="@+id/saveSettings_btn"
             android:layout_weight="1"
             android:text="@string/save_settings"
             android:onClick="saveSettings"/>

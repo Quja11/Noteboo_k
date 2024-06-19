@@ -41,8 +41,6 @@ public class CreateNoteActivity extends AppCompatActivity {
 
         init();
         setSavedValue();
-
-
     }
 
     private void init(){
