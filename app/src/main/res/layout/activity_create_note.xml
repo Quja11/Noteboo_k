@@ -7,10 +7,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="2"
         android:id="@+id/apiView"
 
-        android:background="#FF6D00"
-        android:gravity="center" />
+        android:background="#BA3B3B"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/message"
@@ -20,12 +23,19 @@
         android:inputType="textMultiLine"
         android:gravity="top"
         android:drawableBottom="@color/black"
-        android:minLines="10" />
+        android:minLines="10"
+        android:layout_weight="5"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
         android:text="@string/saveNote"
         android:textAlignment="center"
+        android:background="@drawable/drawable_button"
+        android:layout_marginBottom="10dp"
+
         android:onClick="saveNote"/>
 </LinearLayout>

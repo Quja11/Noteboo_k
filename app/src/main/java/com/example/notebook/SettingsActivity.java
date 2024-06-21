@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,9 @@ public class SettingsActivity extends AppCompatActivity implements Animationable
     //переменные ресурсов
     String[] fonts;
     String[] themes;
+
+    //переменные для viewGroup
+    TableLayout tableLayout;
 
     //переменные статичных view
     TextView fontView;
@@ -51,7 +55,6 @@ public class SettingsActivity extends AppCompatActivity implements Animationable
 
     //переменные для кнопок
     Button saveSettings_btn;
-
 
     //Переменные для настроек
     Settings settings;
@@ -79,6 +82,8 @@ public class SettingsActivity extends AppCompatActivity implements Animationable
 
         settings = new Settings(getBaseContext());
 
+        tableLayout = findViewById(R.id.tableLayout);
+
         fontView = findViewById(R.id.fontView);
         sizeView = findViewById(R.id.sizeView);;
         themeView = findViewById(R.id.themeView);;
@@ -96,10 +101,7 @@ public class SettingsActivity extends AppCompatActivity implements Animationable
         saveSettings_btn = (Button) findViewById(R.id.saveSettings_btn);
 
         //Анимация
-        View[] views = {fontView, sizeView, themeView, exportView, fontValueView, sizeFontView, themeValueView, fontSpinner, seekBar, themeSpinner, exportImageView, saveSettings_btn};
-        for(View view : views){
-            animate(view);
-        }
+        animate(tableLayout);
 
         fonts = getResources().getStringArray(R.array.fonts_array);
         themes = getResources().getStringArray(R.array.themes_array);

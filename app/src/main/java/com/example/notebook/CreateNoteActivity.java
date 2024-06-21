@@ -55,10 +55,12 @@ public class CreateNoteActivity extends AppCompatActivity {
                 String sentence = getContentFromApi("title", 1, "json");
                 String parsingSentence = parseContentFromApi(sentence);
 
+                String formatSentence = String.format("Интересный факт: %s", parsingSentence);
+
                 apiView.post(new Runnable() {
                     @Override
                     public void run() {
-                        apiView.setText(parsingSentence);
+                        apiView.setText(formatSentence);
                     }
                 });
 
